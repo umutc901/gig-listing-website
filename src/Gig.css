@@ -1,0 +1,56 @@
+/* Gig.css */
+
+.gig-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust the gap as needed */
+  }
+  
+  .gig {
+    background-color: #002379;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    width: 48%; /* Ensure both Gigs have the same width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    flex: 1;
+  }
+  
+  .band-name {
+    font-size: 28px;
+    color: #FF9F66;
+    margin-bottom: 10px; /* Consistent margin */
+    margin-top: 10px;
+  }
+  
+  .band-image {
+    width: 100%;
+    border-radius: 5px;
+    height: 200px; /* Fixed height to ensure consistency */
+    object-fit: cover;
+    margin-bottom: 10px; /* Consistent margin */
+  }
+  
+  .event-description {
+    font-size: 18px;
+    margin: 10px 0; /* Consistent margins */
+    color: #FFFAE6;
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .time-date {
+    font-size: 16px;
+    color: #FFFAE6;
+    margin: 5px 0; /* Consistent margins */
+  }
+  
+  .event-location {
+    font-size: 16px;
+    color: #FFFAE6;
+    margin-top: 5px; /* Consistent margin */
+  }
+  

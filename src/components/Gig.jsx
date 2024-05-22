@@ -1,12 +1,14 @@
-const Gig = () => {
+import "../Gig.css";
+
+const Gig = (props) => {
     return(
-        <div id ="gig">
-            <h3 id="band-name">Pink Floyd</h3>
-            <img id="band-image" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/Pink_Floyd_-_all_members.jpg/250px-Pink_Floyd_-_all_members.jpg"></img>
-            <p id="event-description">The Darkside of the moon Tour</p>
-            <p id="time-date">20:00, 17/01/1972</p>
-            <p id="event-location">Rainbow Theatre, London</p>
-        </div>
+        <div className="gig">
+        <h3 className="band-name">{props.bandName}</h3>
+        <img className="band-image" src={props.src} alt="Band" />
+        <p className="event-description">{props.eventDescription}</p>
+        <p className="time-date">{props.timeDate}</p>
+        <p className="event-location">{props.eventLocation}</p>
+      </div>
     )
 }
 export default Gig;
