@@ -8,3 +8,9 @@
 .logo {
   width: 15rem;
 }
+
+.gig-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Adjust the gap as needed */
+}
