@@ -1,56 +1,47 @@
 import React, { useState } from 'react';
 
-const Form = () =>{
+const Form = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
     const handleUsernameChange = (event) => {
-        const inputEl = event.target;
-        setUsername(inputEl.value);        
+        setUsername(event.target.value);
     };
 
     const handlePasswordChange = (event) => {
         setPassword(event.target.value);
-    }
+    };
 
-    const handleSubmit = () => {
+    const handleSubmit = (event) => {
         event.preventDefault();
         fetch("http://localhost:5175/", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({username, password}),
+            body: JSON.stringify({ username, password }),
         });
-
     };
-    return(
+
+    return (
         <form onSubmit={handleSubmit}>
-            <label>
-                Username
-                <input 
-                type="username" 
+            <input 
+                type="text" 
                 name="username" 
+                placeholder="Username"
                 value={username}
-                onChange = {handleUsernameChange}
-                />
-            </label>
-            <label>
-                Password
-                <input 
+                onChange={handleUsernameChange}
+            />
+            <input 
                 type="password" 
                 name="password" 
+                placeholder="Password"
                 value={password}
-                onChange = {handlePasswordChange}
-                />
-            </label>
-            <label>
-                Submit
-                <input type='submit'
-                name='submit' />
-            </label>
+                onChange={handlePasswordChange}
+            />
+            <input type="submit" name="submit" value="Submit" />
         </form>
-    )
+    );
 }
 
 export default Form;

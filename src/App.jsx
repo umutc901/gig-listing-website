@@ -1,15 +1,20 @@
 import React from "react";
-import Hello from "./components/Hello";
-import makersLogo from "./assets/Makers-Logo.png";
 import GigList from "./components/GigList";
+import Form from "./components/Form"; // Import the Form component
 import "./App.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import Form from "./components/Form"
+
 function App() {
   return (
     <>
-      <Form></Form>
-      <Hello name="Finder" />
+      <div className="header-container">
+        <div className="header-title">
+          Gig Finder
+        </div>
+        <div className="header-form">
+          <Form />
+        </div>
+      </div>
       <GigList />
     </>
   );

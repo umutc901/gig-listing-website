@@ -1,12 +1,56 @@
+/* Add this to your App.css */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  width: 15rem;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.header-title {
+  font-size: 2em;
+  font-weight: bold;
+  flex-grow: 1; 
+  text-align: left; 
+}
+
+.header-form {
+  flex-grow: 0; 
+}
+
+.header-form form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+}
+
+.header-form input[type="text"],
+.header-form input[type="password"] {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em; /* Adjust font size for better readability */
+}
+
+.header-form input[type="submit"] {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #002379;
+  color: white;
+  cursor: pointer;
+  font-size: 1em; /* Adjust font size for better readability */
+}
+
+.header-form input[type="submit"]:hover {
+  background-color: #FF5F00;
 }
 
 .gig-container {
@@ -14,3 +58,5 @@
   justify-content: space-between;
   gap: 20px; /* Adjust the gap as needed */
 }
+
+
