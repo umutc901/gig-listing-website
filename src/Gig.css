@@ -53,4 +53,25 @@
     color: #FFFAE6;
     margin-top: 5px; /* Consistent margin */
   }
+
+  .favorite-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: grey;
+}
+
+.favorite-button.favorited {
+    color: #FF5F00;
+}
+
+.favorite-button .far {
+    color: #FF9F66;
+}
+
+.favorite-button .fas {
+    color: #FF5F00;
+}
   
